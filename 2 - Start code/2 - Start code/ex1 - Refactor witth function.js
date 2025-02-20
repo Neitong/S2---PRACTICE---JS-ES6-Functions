@@ -25,3 +25,24 @@ for (let item of shoppingCart) {
   totalPrice += item.price * item.quantity;
 }
 console.log("Total price:", totalPrice);
+
+
+/*
+* A function that calculates the total price of items in a shopping cart
+* @param {Array} cart - an array of objects with 'price' and 'quantity' properties
+* @returns {number} - the total price of all items in the cart
+*
+*/
+function calculateTotalPrice(cart){
+  let total = 0;
+  for(let item of cart){
+    total += item.price * item.quantity;
+  }
+  return total;
+
+}
+
+//Testing function
+let total = calculateTotalPrice(shoppingCart);
+console.log("Total price:", total);
+
